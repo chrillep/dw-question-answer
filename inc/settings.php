@@ -512,6 +512,12 @@ function dwqa_captcha_in_single_question_display() {
 	echo '<p><input type="checkbox" name="dwqa_options[captcha-in-single-question]"  id="dwqa_options_captcha_in_question" value="1" '.checked( 1, (isset($dwqa_general_settings['captcha-in-single-question'] ) ? $dwqa_general_settings['captcha-in-single-question'] : false ) , false ) .'><span class="description">'.__( 'Enable/Disable captcha on single question page','dwqa' ).'</span></p>';
 }
 
+function dwqa_captcha_use_ssl_display() {
+	global $dwqa_general_settings;
+	
+	echo '<p><input type="checkbox" name="dwqa_options[captcha-use-ssl]"  id="dwqa_options_captcha_use_ssl" value="1" '.checked( 1, (isset($dwqa_general_settings['captcha-use-ssl'] ) ? $dwqa_general_settings['captcha-use-ssl'] : false ) , false ) .'><span class="description">'.__( 'Enable/Disable use of SSL','dwqa' ).'</span></p>';
+}
+
 function dwqa_captcha_google_pubic_key_display() {
 	global $dwqa_general_settings;
 	$public_key = isset( $dwqa_general_settings['captcha-google-public-key'] ) ?  $dwqa_general_settings['captcha-google-public-key'] : '';
